@@ -1,0 +1,41 @@
+강석민 강사
+smkang @ codenuri.co.kr
+
+1. 실습환경 : visual studio 2022 community 
+
+            www.visualstudio.net 에서 commnunity 버전 설치
+
+       	    반드시 community 버전 사용(라이선스 문제 )
+
+            주의)설치시 "C++ 을 사용한 Desktop 개발"을 반드시 선택
+
+2. github.com/codenuri/kea  에서 DAY1.zip  받으시면 됩니다.
+=> 수업에서 강사가 만든 코드도 이곳에 올려 놓겠습니다.
+
+3. C++ 언어 : 가장 어렵고 복잡한 프로그래밍 언어
+=> OS 자체는 "C" 언어로 개발
+=> OS 제외한 주요 핵심 프로그램은 C++
+=> 자동차 "autosar", 테슬라 
+
+4. 참고 사이트
+isocpp.org => C++ 표준 위원회 사이트, C++ 버전과 역사 알아 두세요
+
+cppreference.com => C++ 도움말 사이트. 가장유명한 사이트
+
+godbolt.org => 프로그래머의 필수사이트, 각각의 언어를 기계어(어셈블리) 확인
+
+유튜브 - "cppcon" 채널 검색
+        => C++ 표준위원회가 진행하는 Conference 동영상
+	
+
+
+
+
+
+
+
+
+
+
+
+
