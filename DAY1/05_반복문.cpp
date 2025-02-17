@@ -11,8 +11,9 @@ int main()
 
 	// C++11 에서 도입된 새로운 for 문
 	// => range-based for
-	for (int e : x)
-	{
+	for (auto e : x) // x는 배열뿐 아니라 vector,list 등 C++표준라이브러리
+	{				// 도 가능
+
 		std::cout << e << std::endl;
 	}
 }
