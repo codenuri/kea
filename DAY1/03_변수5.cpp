@@ -11,7 +11,7 @@ typedef void(*PF)();
 using DWORD = int;
 using PF = void(*)();
 
-// typedef : 타입의 별명만 만들수 있습니다.
+// typedef : 타입의 별명 만 만들수 있습니다.
 // using   : 타입의 별명 + "템플릿" 의 별명 도 만들수 있습니다.
 
 int main()
