@@ -28,6 +28,17 @@ int main()
 {
 	// 틀을 사용해서 함수를 생성하고 사용하기
 	// #1. 타입 전달 
-	square<int>(3);
-	square<double>(3.4);
+	square<int>(3);		// 1. 틀을 사용해서 컴파일 시간에
+						//    int square(int) 함수를 생성하고
+						// 2. 이 위치를 call square(int) 코드로 컴파일
+
+	square<double>(3.4);// 1. double square(double) 함수를 생성
+						// 2. call square(double)
+
+	// #2. 템플릿 사용시 타입인자 생략가능합니다.
+	//     이 경우는 함수 인자를 보고 컴파일러가 타입결정
+	square(3);	 // 3이라는 인자 때문에 T = int 로 결정
+	square(3.4); // T = 3.4
 }
+
+// 완벽하게 이해 하려면 "godbolt.org" 에서 기계어 보세요
