@@ -14,7 +14,8 @@ void f4(int a, int b = 0, int c) {} // error
 // => 함수를 선언과 구현으로 분리시는 선언에 표기
 void f5(int a, int b, int c = 0);
 
-void f5(int a, int b, int c = 0)
+//void f5(int a, int b, int c ) // 표기하지 않거나
+void f5(int a, int b, int c /*=0*/ ) // 가독성을 위해 주석으로
 {
 
 }
