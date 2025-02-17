@@ -33,6 +33,9 @@ int main()
 
 	// foo 함수에서 인자의 값을 절대 수정하면 안된다면
 	foo(x);
-
-
 }
+
+// 인자 타입의 크기가 어느 정도 일때까지 call by value 를 사용하나요 ?
+// => 보통 CPU 에서 레지스터 한개에 담을 정도 까지는 call by value 권장
+// => 64bit CPU 에서는 8바이트(double) 데이타 정도는 call by value 
+//    그 이상은 const reference
