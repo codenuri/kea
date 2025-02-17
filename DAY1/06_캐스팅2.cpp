@@ -8,7 +8,10 @@
 //      void*=> 다른 타입*,
 //		상속관계의 캐스팅 등.
 //      반드시 연관성이 있어야 한다
+//      표준 타입끼리의 값 변환 (3.4 => int 로)
 
+// 위 작업 외에는 위험한 변환이다. 전용캐스팅 사용
+// reinterpret_cast, const_cast 
 
 int main()
 {
@@ -21,8 +24,9 @@ int main()
 	int* p1 = (int*)malloc(100);				// C 스타일 캐스팅
 	int* p2 = static_cast<int*>(malloc(100));	// C++ 스타일 캐스팅 
 
+
 	// void* 가 아닌 다른 타입끼리의 주소 변환
-	double* p3 = static_cast<double*>(&n);
+//	double* p3 = static_cast<double*>(&n); // error
 
 
 }
