@@ -16,6 +16,9 @@ void Swap(int* a, int* b)
 // #4. 이름 충돌을 막기위해 namespace 도입
 // #5. 아래 swap 은 이미 C++표준에 있습니다.
 
+// C++ 표준 라이브러리 이름 => STL
+// => Standard Template Library
+
 namespace Utils
 {
 	template<typename T>
