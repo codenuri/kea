@@ -7,23 +7,26 @@
 //  => Shape* 로 draw() 를 호출하려면 Shape 안에 draw() 있어야 한다.
 
 
+// 핵심 #4. 기반 클래스 멤버 함수중, 파생 클래스가 override 하게 되는 것은
+//			virtual 함수로 만들어야 한다!!
+
 class Shape
 {
 	int color;
 public:
-	void draw() { std::cout << "draw shape\n"; }
+	virtual void draw() { std::cout << "draw shape\n"; }
 };
 
 class Rect : public Shape
 {
 public:
-	void draw() { std::cout << "draw rect\n"; }
+	virtual void draw() { std::cout << "draw rect\n"; }
 };
 
 class Circle : public Shape
 {
 public:
-	void draw() { std::cout << "draw circle\n"; }
+	virtual void draw() { std::cout << "draw circle\n"; }
 };
 
 int main()
