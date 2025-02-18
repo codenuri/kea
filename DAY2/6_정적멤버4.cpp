@@ -19,7 +19,6 @@ public:
 											// 객체 없이도 호출가능한 멤버 함수
 											// "Car::get_count()" 로 호출
 };
-
 int Car::count = 0;
 
 
@@ -36,3 +35,16 @@ int main()
 	std::cout << Car::get_count() << std::endl; // ok. 권장
 }
 
+// 정리
+// static member data
+// => 모든 객체가 공유하는 멤버 데이타
+// => 객체가 없어도 메모리에 존재한다.
+
+
+// static member function
+// => 객체 없이 호출가능한 멤버 함수.
+
+// const member function  : 객체가 상수 일때를 고려한것!!
+// static member function : 객체가 없이(클래스이름으로)  호출하므로
+//							객체가 상수/비상수 라는 것 차체를 고려할 필요 없다!!
+//							그래서 static member function 는 상수 멤버함수가 될수 없다.
