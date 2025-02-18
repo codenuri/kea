@@ -9,13 +9,29 @@
 
 // 핵심 #4. 기반 클래스 멤버 함수중, 파생 클래스가 override 하게 되는 것은
 //			virtual 함수로 만들어야 한다!!
+// => 어떤 멤버 함수를 를 virtual 로 할지 non-virtual 로 할지 잘 판단하세요
+// => 아래 Shape 클래스 참고
 
 class Shape
 {
 	int color;
 public:
+	// 아래 멤버 함수는 virtual 로 할까요 ? non-virtual 로 할까요 ?
+	// => 파생 클래스가 override 할 이유 없습니다 - non-virtual
+	// => virtual 로 해도 되지만, virtual 는 느립니다.
+	void set_color(int c) { color = c; }
+
+
+	// 도형의 면적 구하는 방법은 모든 도형이 다릅니다.
+	// => 파생 클래스가 override 해야 합니다
+	// => virtual!!
+	virtual int get_area() const { return -1; }
+
+
 	virtual void draw() { std::cout << "draw shape\n"; }
 };
+
+
 
 class Rect : public Shape
 {
