@@ -37,8 +37,9 @@ public:
 	// 이제 vector 제작자는 "사용자들이 유용하게 사용할수 있는"
 	// 다양한 멤버 함수를 제공해 주면 됩니다.
 
+	int size() { return sz; }
 
-
+	bool empty() { return sz == 0; }
 };
 
 int main()
@@ -50,6 +51,6 @@ int main()
 
 	std::cout << v.at(0) << std::endl; // 10
 
-
+	std::cout << v.size() << std::endl;
 
 }
