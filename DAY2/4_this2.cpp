@@ -20,7 +20,6 @@ public:
 	Point& goo() { return *this; }
 		// => 주의, 자신을 값 타입으로 반환할때는 value 가 아닌(복사본 생성됨)
 		// => 반드시 reference(별명) 으로 반환해야 합니다.
-
 };
 int main()
 {
