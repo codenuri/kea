@@ -45,10 +45,16 @@ int main()
 	//					   => C++컴파일러는 p3가 가리키는 객체를 알수 없다.
 	//					   => C++컴파일러는 p3 자체 타입인 Animal* 만 알고 있다.
 
-	p3->age = 10;
-	p3->color = 10; // error
+	p3->age = 10;	// ok
+//	p3->color = 10; // error
 
 
+	// 핵심 #4. p3를 사용해서 color 멤버에 접근하려면
+	// => p3를 Dog* 타입으로 캐스팅해야 한다
+
+	static_cast<Dog*>(p3)->color = 10; // ok
+				// 단, 이경우 p3가 가리키는 곳이 Dog 객체라는 확신이 있어야 한다.
+				// 만일 Dog 객체가 아니였다면 미정의 동작(undefined behavior) 발생
 }
 
 
