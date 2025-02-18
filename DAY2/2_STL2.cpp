@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstring> // C 헤더인 <string.h> 의 C++ 버전, strcmp 같은 문자열 함수
-#include <string>
+#include <string>  // std::string
 
 int main()
 {
@@ -10,6 +10,7 @@ int main()
 	
 //	if ( cs1 == cs2 ) {} // 버그, 문자열 비교가 아닌 배열의 주소 비교
 	if (strcmp(cs1, cs2) == 0) {} // 문자열 비교 함수 사용해야 합니다.
+
 
 	// C++ 은 std::string 클래스가 이미 제공됩니다.
 	// 문자열을 정수형 변수와 동일하게 사용가능합니다.
