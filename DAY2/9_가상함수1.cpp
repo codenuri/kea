@@ -24,5 +24,8 @@ int main()
 	// p 자체의 타입      : Animal*
 	// p 가 가리키는 객체 : Dog
 	p->Cry1(); // 1 ? 2 
+
+	// C++, C#			   : Animal Cry1 - static binding
+	// java, swift, python : Dog Cry1    - dynamic binding
 }
 
