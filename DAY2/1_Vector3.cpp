@@ -16,8 +16,10 @@ public:
 
 	~vector() { delete[] ptr; }
 
+	// 핵심 : reference 를 반환해야 아래 처럼 사용가능합니다.
+	// v.at(0) = 10;
 
-	int at(int idx) { return ? ; }
+	int& at(int idx) { return ptr[idx] ; }
 };
 
 int main()
