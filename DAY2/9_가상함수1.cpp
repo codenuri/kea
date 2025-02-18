@@ -29,3 +29,22 @@ int main()
 	// java, swift, python : Dog Cry1    - dynamic binding
 }
 
+// p->Cry1() 을 어떤 함수와 연결할것인가 ?
+// => 함수 바인딩(function binding) 이라고 합니다
+
+// 1. static binding : 컴파일러가 컴파일 시간에 연결할 함수를 결정하는 것
+//					   핵심) 컴파일러는 p 가 가리키는 곳이 어떤 타입의 객체인지 알수없다
+//					   그래서, 컴파일러가 함수 를 결정하면 p 자체의 타입인 Animal* 로
+//					   결정. 즉, Animal Cry1
+
+// 빠르다, 하지만 논리적이지 못하다.
+// C++, C# 언어의 기본 바인딩 정책
+
+
+// 2. dynamic binding : 컴파일 시간에 p가 가리키는 곳을 조사하는 기계어 코드 생성
+//						실행시간에 p가 가리키는 객체를 조사해서 함수를 결정
+//						Dog 객체를 가리켰다면 Dog Cry1 호출
+
+// 논리적이지만 약간 느리다.
+// Java, Swift, Python 의 방식
+// C++/C# 의 virtual function 
