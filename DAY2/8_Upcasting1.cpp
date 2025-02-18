@@ -36,7 +36,15 @@ int main()
 
 
 	// 핵심 #3. Animal* 인 p3로는 Animal로 부터 상속받은 멤버만 접근 가능하다.
-	
+
+	// C++    : static type check 언어
+	// python : dynamic type check
+
+	// static type check : 코드(타입)의 유효성을 컴파일 시간에 조사
+	//					   즉, 컴파일러가 자신이 아는 타입으로 멤버 접근이 가능한지 조사
+	//					   => C++컴파일러는 p3가 가리키는 객체를 알수 없다.
+	//					   => C++컴파일러는 p3 자체 타입인 Animal* 만 알고 있다.
+
 	p3->age = 10;
 	p3->color = 10; // error
 
