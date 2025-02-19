@@ -24,8 +24,10 @@ public:
 //	virtual void Clone() {};
 //	virtual void Move(int n) {};
 	
-	// #3. 그래서 C++11 부터 "override" 라는 키워드 도입
 
+	// #3. 그래서 C++11 부터 "override" 라는 키워드 도입
+	// => 컴파일러에게 기반 클래스 가상함수를 오버라이드 한다고 알리는 것
+	// => override 를 붙이면 앞에 virtual 은 없어도 가독성이 나쁘지 않습니다.
 	virtual void draw()  override {};
 	virtual void Clone() override {};
 	virtual void Move(int n) override {};
