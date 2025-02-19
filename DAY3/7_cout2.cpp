@@ -8,12 +8,13 @@ namespace std
 	class ostream
 	{
 	public:
+		// 실제 구현은 "printf" 가 아닌 각 OS 의 시스템 콜 사용. 
+		void operator<<(int n)    { printf("%d", n); }
+		void operator<<(double d) { printf("%lf", d); }
 	};
 
 	ostream cout; // 결국 cout 은 전역변수 입니다.
 }
-
-
 
 int main()
 {
