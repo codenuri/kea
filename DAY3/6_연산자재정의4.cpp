@@ -10,7 +10,7 @@ public:
 	void print() const { std::cout << x << ", " << y << std::endl; }
 
 
-	Point operator+(const Point& p)
+	Point operator+(const Point& p) const
 	{
 		Point tmp(x + p.x, y + p.y);
 
