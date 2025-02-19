@@ -1,12 +1,18 @@
 #include <iostream>
 
 // 반드시 알아야할 필수 문법
+// => 상속 문법을 사용한다면
+// => 기반 클래스 소멸자를 반드시 virtual 하세요
+// => "가상소멸자" 라고 불리는 문법
 
 class Base
 {
 public:
 	Base()  {  }
-	~Base() {  }
+//	~Base() {  }
+	virtual ~Base() {} // 핵심 : 기반 클래스의 소멸자는 virtual 이어야 합니다.
+						// 기반 클래스 소멸자가 virtual 이면
+						// 모든 파생 클래스 소멸자도 자동으로 virtual 입니다.
 };
 class Derived : public Base
 {
