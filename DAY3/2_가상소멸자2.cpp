@@ -38,3 +38,8 @@ int main()
 	delete static_cast<Derived*>(p);
 
 }
+
+// C++ 문법이 너무 어렵고 복잡해서 C++ 창시자가 가이드 라인을 작성하고 있습니다
+// => 구글에서 "C++ Core guidelines" 검색 후 1번째 링크
+// 
+// => 자동차 진영의 "MISRA C++" 도 결국 위 가이드라인을 참고해서 작성
