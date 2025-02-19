@@ -41,6 +41,12 @@ public:
 	void take() { std::cout << "take HD picture" << std::endl; }
 };
 
+class UHDCamera : public ICamera
+{
+public:
+	void take() { std::cout << "take UHD picture" << std::endl; }
+};
+
 int main()
 {
 	People p;
@@ -51,6 +57,9 @@ int main()
 	HDCamera hc;
 	p.use_camera(&hc);
 
+	UHDCamera uhc;		// 나중에 새로운 요소(카메라 클래스)가 추가되었지만
+	p.use_camera(&uhc);	// People 을 수정하지 않아도 사용가능하다.
+						// => 규칙(인터페이스)를 먼저 설계했기 때문에
 }
 
 
