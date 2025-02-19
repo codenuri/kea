@@ -19,16 +19,20 @@ int main()
 	try
 	{
 		int ret = db_backup();
+
+		// ret 사용
+
+//		db_remove();	// 여기서 해도 되고, catch 아래서 해도 됩니다.
 	}
 	catch (int e)
 	{
 		std::cout << "예외 발생\n";
+
 		// 던져진 예외에 대한 오류를 해결할수 없다면
 		// 사용자에게 알리고 종료하세요
 		// std::exit(-1);
 
 		// 종료 하지 않으면 프로그램은 계속 실행될수 있습니다.
 	}
-
 	db_remove();
 }
