@@ -42,8 +42,17 @@ int main()
 	// 멤버가 좋다는 의견     : private 영역에 접근 하려면 멤버 함수가 편하다.
 	// non-멤버가 좋다는 의견 : 멤버함수로 만들수 없을때가 있다.
 
-	Point p4 = p1 + p2;
-	Point p5 = p1 + 3;
-	Point p6 = n  + p1;
+	Point p4 = p1 + p2;	// p1.operator+(Point)
+	Point p5 = p1 + 3;	// p1.operator+(int)
+	Point p6 = 3  + p1; // 3.operator+(Point) 인데, 만들수 없다. 이경우는 멤버함수로 만들수 없다.
+						// operator+(int, Point) 즉, non-멤버함수로는 가능하다.
+
+	// 결론 : 1번째 인자가 다른 타입이 될수 있는 연산자는 "non-member" 권장
+	//        그렇지 않은 연산자는 "member" 권장
+
+	// +, -, *, / ...  : non-member
+	// +=, -= ..       : member 권장
+	// p1 += 3;
+
 }
 
